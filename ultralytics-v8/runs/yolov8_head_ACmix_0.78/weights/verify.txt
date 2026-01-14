@@ -1,0 +1,63 @@
+📄 日志文件将保存至: F:\yolov8_lichi\runs\detect\yolov8_litch\weights\verify.txt
+🚀 程序启动...
+当前时间: 2026-01-12 15:46:55
+
+==================== 正在分析文件配套性 ====================
+配置文件 (YAML): F:\yolov8_lichi\ultralytics-main\ultralytics\cfg\models\v8\yolov8-AC-head.yaml
+权重文件 (PT):   F:\yolov8_lichi\runs\detect\yolov8_litch\weights\best.pt
+1. 尝试使用 YAML 构建模型骨架... ✅ 成功
+2. 读取 PT 权重文件... ✅ 成功
+3. 正在比对权重与模型结构...
+   - YAML 定义层数(Keys): 359
+   - PT 包含层数(Keys):   359
+   - 完美匹配层数:        359
+
+✅ [完美匹配] YAML 与 PT 文件结构完全一致！
+
+✅ 将使用 YAML 配置加载模型 (最准确)...
+
+==================== 网络结构详情 ====================
+Idx   | Module Type                         | Params     | Arguments
+--------------------------------------------------------------------------------
+0     | ultralytics.nn.modules.conv.Conv    | 464        | from=-1 idx=0 
+1     | ultralytics.nn.modules.conv.Conv    | 4672       | from=-1 idx=1 
+2     | ultralytics.nn.modules.block.C2f    | 7360       | from=-1 idx=2 
+3     | ultralytics.nn.modules.conv.Conv    | 18560      | from=-1 idx=3 
+4     | ultralytics.nn.modules.block.C2f    | 49664      | from=-1 idx=4 
+5     | ultralytics.nn.modules.conv.Conv    | 73984      | from=-1 idx=5 
+6     | ultralytics.nn.modules.block.C2f    | 197632     | from=-1 idx=6 
+7     | ultralytics.nn.modules.conv.Conv    | 295424     | from=-1 idx=7 
+8     | ultralytics.nn.modules.block.C2f    | 460288     | from=-1 idx=8 
+9     | ultralytics.nn.modules.block.SPPF   | 164608     | from=-1 idx=9 
+10    | torch.nn.modules.upsampling.Upsample | 0          | from=-1 idx=10 
+11    | ultralytics.nn.modules.conv.Concat  | 0          | from=[-1, 6] idx=11 
+12    | ultralytics.nn.modules.block.C2f    | 148224     | from=-1 idx=12 
+13    | torch.nn.modules.upsampling.Upsample | 0          | from=-1 idx=13 
+14    | ultralytics.nn.modules.conv.Concat  | 0          | from=[-1, 4] idx=14 
+15    | ultralytics.nn.modules.block.C2f    | 37248      | from=-1 idx=15 
+16    | ultralytics.nn.modules.ACmix.ACmix  | 14850      | from=-1 idx=16 
+17    | ultralytics.nn.modules.conv.Concat  | 0          | from=[-1, 12] idx=17 
+18    | ultralytics.nn.modules.block.C2f    | 123648     | from=-1 idx=18 
+19    | ultralytics.nn.modules.conv.Conv    | 147712     | from=-1 idx=19 
+20    | ultralytics.nn.modules.conv.Concat  | 0          | from=[-1, 9] idx=20 
+21    | ultralytics.nn.modules.block.C2f    | 493056     | from=-1 idx=21 
+22    | ultralytics.nn.modules.head.Detect  | 751507     | from=[15, 18, 21] idx=22 
+
+==================== GFLOPS 计算 ====================
+正在进行 thop 性能分析...
+输入尺寸: (640, 640)
+GFLOPS:   4.1200 G
+Params:   2.9889 M
+
+==================== FPS 纯推理测试 ====================
+测试设备: cuda:0
+预读取 500 张图片到内存...
+🔥 预热模型 (Warmup 10次)...
+🚀 开始计时...
+处理数量: 500 张
+总耗时:   5.2812 s
+平均延迟: 10.56 ms
+推理 FPS: 94.68
+
+🎉 所有任务完成!
+结果已保存到: F:\yolov8_lichi\runs\detect\yolov8_litch\weights\verify.txt
